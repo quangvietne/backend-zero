@@ -1,8 +1,12 @@
 const express = require("express"); //commonjs
 // import express from 'express'; //es modules
+require("dotenv").config();
+console.log(">> Check env : ", process.env);
+
 const app = express(); //
-const port = 3000;
+const port = process.env.PORT || 3000; // -> hardcode .uat .production
 const path = require("path");
+const hostname = process.env.HOST_NAME;
 
 //config template engine
 app.set("views", path.join(__dirname, "./views/"));
@@ -21,6 +25,6 @@ app.get("/quangviet", (req, res) => {
   // view động -> render()
   res.render("sample.ejs");
 });
-app.listen(port, () => {
+app.listen(port, hostname, () => {
   console.log(`Example app listening on port ${port}`);
 });
