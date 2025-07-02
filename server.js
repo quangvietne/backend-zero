@@ -1,14 +1,13 @@
-const { createServer } = require("node:http");
-
-const hostname = "127.0.0.1";
+const express = require("express"); //commonjs
+// import express from 'express'; //es modules
+const app = express(); //
 const port = 3000;
 
-const server = createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");
-  res.end("Hello World with Hoi dan IT");
+// khai báo route
+app.get("/", (req, res) => {
+  res.send("Hello World! with Hoi dan IT");
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
 });
