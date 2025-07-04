@@ -16,6 +16,7 @@ configViewEngine(app);
 app.use("/", webRouter);
 
 // // test conection
+// simple query
 connection.query("SELECT * FROM Users", function (err, results, fields) {
   if (err) {
     console.error("Query failed:", err); // ← CỰC KỲ QUAN TRỌNG
