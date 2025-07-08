@@ -10,6 +10,10 @@ const webRouter = require("./routes/web"); // import web router
 const port = process.env.PORT || 3000; // -> hardcode .uat .production
 const hostname = process.env.HOST_NAME;
 
+// config  req.body -> Lấy data từ client gửi lên
+app.use(express.json()); // for json
+app.use(express.urlencoded({ extended: true })); // for form data
+
 //config template engine and config static file
 configViewEngine(app);
 // khai báo router

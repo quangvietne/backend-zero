@@ -12,4 +12,9 @@ const getABC = (req, res) => {
 const getQv = (req, res) => {
   res.render("sample.ejs");
 };
-module.exports = { getHomePage, getABC, getQv };
+
+const postCreateUser = (req, res) => {
+  console.log(">>> req body :", req.body);
+  res.send("create a new user");
+};
+module.exports = { getHomePage, getABC, getQv, postCreateUser };
