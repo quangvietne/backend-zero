@@ -19,16 +19,6 @@ configViewEngine(app);
 // khai báo router
 app.use("/", webRouter);
 
-// // test conection
-// simple query
-// connection.query("SELECT * FROM Users", function (err, results, fields) {
-//   if (err) {
-//     console.error("Query failed:", err); // ← CỰC KỲ QUAN TRỌNG
-//     return;
-//   }
-//   console.log(">>> results =", results);
-// });
-
 app.listen(port, hostname, () => {
   console.log(`Example app listening on port ${port}`);
 });

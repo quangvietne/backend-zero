@@ -46,5 +46,7 @@ button {
   margin: 10px;
   cursor: pointer;
 }
-
+.d_none {
+  display: none;
+}
 
